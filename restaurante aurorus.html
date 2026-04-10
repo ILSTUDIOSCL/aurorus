@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURORUS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#1f2a5a;
+  --blue2:#2e3b7a;
+  --gold:#d4a84f;
+  --bg:#f6f4ef;
+}
+
+body{
+  margin:0;
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(180deg,var(--blue),#121a3a);
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+
+.logo{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  margin-bottom:10px;
+}
+
+h1{
+  font-family:'Playfair Display';
+  margin:0;
+}
+
+.tag{
+  font-size:12px;
+  opacity:.6;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  gap:10px;
+  overflow:auto;
+  padding:10px;
+  background:var(--blue2);
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  background:rgba(255,255,255,.1);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+/* SECTION */
+.section{
+  padding:20px;
+}
+
+.section h2{
+  font-family:'Playfair Display';
+  color:var(--blue);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+}
+
+.card-body{
+  padding:12px;
+}
+
+.name{
+  font-weight:600;
+}
+
+.desc{
+  font-size:12px;
+  color:#555;
+}
+
+.price{
+  margin-top:6px;
+  font-weight:700;
+  color:var(--blue);
+}
+
+/* BEBIDAS PREMIUM */
+.beb-box{
+  background:white;
+  border-radius:16px;
+  padding:15px;
+  margin-bottom:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+.beb-title{
+  font-family:'Playfair Display';
+  color:var(--blue);
+  margin-bottom:10px;
+}
+
+.beb-item{
+  display:flex;
+  justify-content:space-between;
+  padding:8px 0;
+  border-bottom:1px solid #eee;
+}
+
+.beb-item:last-child{
+  border-bottom:none;
+}
+
+.beb-left{
+  max-width:75%;
+}
+
+.beb-name{
+  font-weight:600;
+}
+
+.beb-desc{
+  font-size:11px;
+  color:#777;
+}
+
+.beb-price{
+  font-weight:700;
+  color:var(--blue);
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+  .grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" class="logo">
+  <h1>AURORUS</h1>
+  <div class="tag">Elevamos los ingredientes mediante la técnica</div>
+</header>
+
+<nav>
+  <a href="#entradas">Entradas</a>
+  <a href="#principales">Principales</a>
+  <a href="#especiales">Especiales</a>
+  <a href="#postres">Postres</a>
+  <a href="#bebidas">Bebidas</a>
+</nav>
+
+<!-- ENTRADAS -->
+<section id="entradas" class="section">
+<h2>Entradas</h2>
+<div class="grid">
+
+<div class="card">
+<img src="img/chochas.jpg">
+<div class="card-body">
+<div class="name">Chochas y Sandía</div>
+<div class="desc">Leche de tigre, palta, menta fresca</div>
+<div class="price">$15.500</div>
+</div>
+</div>
+
+<div class="card">
+<img src="img/pastrami.jpg">
+<div class="card-body">
+<div class="name">Pastrami</div>
+<div class="desc">Sandwich con mix verde y sandía encurtida</div>
+<div class="price">$15.500</div>
+</div>
+</div>
+
+<div class="card">
+<img src="img/gyozas.jpg">
+<div class="card-body">
+<div class="name">Gyozas</div>
+<div class="desc">Rellenas con champiñones y frijoles</div>
+<div class="price">$13.500</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PRINCIPALES -->
+<section id="principales" class="section">
+<h2>Principales</h2>
+<div class="grid">
+
+<div class="card">
+<img src="img/lengua.jpg">
+<div class="card-body">
+<div class="name">Lengua y Mole</div>
+<div class="desc">Cocción 24 hrs con mole del norte</div>
+<div class="price">$17.900</div>
+</div>
+</div>
+
+<div class="card">
+<img src="img/ossobuco.jpg">
+<div class="card-body">
+<div class="name">Ossobuco y Pastelera</div>
+<div class="desc">Pastelera de choclo y demi-glace</div>
+<div class="price">$19.900</div>
+</div>
+</div>
+
+<div class="card">
+<img src="img/pork.jpg">
+<div class="card-body">
+<div class="name">Pork Belly</div>
+<div class="desc">Puré, salsa agridulce</div>
+<div class="price">$18.900</div>
+</div>
+</div>
+
+<div class="card">
+<img src="img/pescado.jpg">
+<div class="card-body">
+<div class="name">Pescado y Orzo</div>
+<div class="desc">Orzo cremoso, cilantro</div>
+<div class="price">$17.900</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- BEBIDAS PREMIUM -->
+<section id="bebidas" class="section">
+<h2>Bebestibles</h2>
+
+<div class="beb-box">
+<div class="beb-title">Clásicos</div>
+
+<div class="beb-item"><span>Copa vino</span><span class="beb-price">Desde $4.500</span></div>
+<div class="beb-item"><span>Botella vino</span><span class="beb-price">Desde $15.000</span></div>
+<div class="beb-item"><span>Descorche</span><span class="beb-price">$15.000</span></div>
+<div class="beb-item"><span>Pisco Sour</span><span class="beb-price">$5.500</span></div>
+<div class="beb-item"><span>Cerveza regional</span><span class="beb-price">$4.200</span></div>
+<div class="beb-item"><span>Bajativo</span><span class="beb-price">$3.500</span></div>
+</div>
+
+<div class="beb-box">
+<div class="beb-title">Cocktails Aurorus</div>
+
+<div class="beb-item">
+<div class="beb-left">
+<div class="beb-name">Moscow Mule</div>
+<div class="beb-desc">Vodka, ginger beer, menta, limón</div>
+</div>
+<div class="beb-price">$6.500</div>
+</div>
+
+<div class="beb-item">
+<div class="beb-left">
+<div class="beb-name">Sandía Menta</div>
+<div class="beb-desc">Vodka, sandía, menta, limón</div>
+</div>
+<div class="beb-price">$6.500</div>
+</div>
+
+<div class="beb-item">
+<div class="beb-left">
+<div class="beb-name">Floral Gin</div>
+<div class="beb-desc">Gin, tónica cherry blossom</div>
+</div>
+<div class="beb-price">$6.500</div>
+</div>
+
+</div>
+
+<div class="beb-box">
+<div class="beb-title">Mocktails</div>
+
+<div class="beb-item">
+<div class="beb-left">
+<div class="beb-name">Pink Lemonade</div>
+<div class="beb-desc">Frutos rojos, limón</div>
+</div>
+<div class="beb-price">$5.500</div>
+</div>
+
+<div class="beb-item">
+<div class="beb-left">
+<div class="beb-name">Paloma</div>
+<div class="beb-desc">Pomelo, limón, sal</div>
+</div>
+<div class="beb-price">$5.500</div>
+</div>
+
+<div class="beb-item">
+<div class="beb-left">
+<div class="beb-name">Moscow Mule Zero</div>
+<div class="beb-desc">Ginger beer, menta, limón</div>
+</div>
+<div class="beb-price">$5.500</div>
+</div>
+
+</div>
+
+<div class="beb-box">
+<div class="beb-title">Otros</div>
+
+<div class="beb-item"><span>Agua embotellada</span><span class="beb-price">$2.000</span></div>
+<div class="beb-item"><span>San Pellegrino</span><span class="beb-price">$3.500</span></div>
+<div class="beb-item"><span>Vino sin alcohol</span><span class="beb-price">$4.000</span></div>
+<div class="beb-item"><span>Cerveza zero</span><span class="beb-price">$4.000</span></div>
+<div class="beb-item"><span>Infusiones</span><span class="beb-price">$2.500</span></div>
+
+</div>
+
+</section>
+
+</body>
+</html>
